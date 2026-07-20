@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#f7f5f1;font-family:'Work Sans',sans-serif;color:#232a35;-webkit-font-smoothing:antialiased}
+  a{color:#b68a3d;text-decoration:none}
+  a:hover{color:#8f6c2c}
+  h1,h2,h3{font-family:'Playfair Display',serif;margin:0}
+  em{font-style:italic;color:#b68a3d}
+  ::selection{background:#b68a3d;color:#fff}
+  .logo-dark{display:none}
+  @media (prefers-color-scheme:dark){.logo-light{display:none}.logo-dark{display:block}}
+  html[data-theme="dark"] .logo-light{display:none}
+  html[data-theme="dark"] .logo-dark{display:block}
+</style>
+</helmet>
+<div style="position: absolute; width: 100%; min-height: 100vh; background-image: url('assets/hex-texture.png'); background-size: 640px; background-repeat: repeat; background-position: top center; left: 1px; top: 12px">
+
+<!-- HEADER -->
+<header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 48px;background:rgba(247,245,241,0.92);backdrop-filter:blur(8px);border-bottom:1px solid #e6e2da">
+  <a href="#inicio" style="display:flex;align-items:center">
+    <img src="assets/apc-logo.png" alt="APC Petroleum CA" class="logo-light" style="height:46px;width:auto;display:block">
+    <img src="assets/apc-logo-white.png" alt="APC Petroleum CA" class="logo-dark" style="height:46px;width:auto;display:none">
+  </a>
+  <nav style="display:flex;align-items:center;gap:36px">
+    <a href="#inicio" style="color:{{ navColors.inicio }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">Inicio</a>
+    <a href="#quienes-somos" style="color:{{ navColors.quienesSomos }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">Quiénes Somos</a>
+    <a href="#empresas" style="color:{{ navColors.empresas }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">Empresas</a>
+    <a href="#servicios" style="color:{{ navColors.servicios }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">Servicios</a>
+    <a href="#presencia" style="color:{{ navColors.presencia }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">Presencia</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:12px">
+    <a href="#contacto" style="padding:11px 22px;border:1.5px solid #0d1b30;border-radius:2px;font-size:13.5px;font-weight:600;color:#0d1b30;letter-spacing:.3px" style-hover="background:#0d1b30;color:#fff">Contacto</a>
+    <a href="{{ brochureHref }}" style="padding:11px 22px;background:#b68a3d;border-radius:2px;font-size:13.5px;font-weight:600;color:#fff;letter-spacing:.3px;white-space:nowrap" style-hover="background:#8f6c2c">Descargar Folleto Corporativo</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" style="position:relative;background:#0a1526;padding:96px 48px 76px;overflow:hidden">
+  <img src="assets/Background.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0" alt=""/>
+  <div style="position: absolute; inset: 0; z-index: 1; opacity: 1; background-color: #070706B7"></div>
+  
+  
+  <div style="max-width:760px;margin:0 auto;text-align:center;position:relative;z-index:2">
+    <div style="display:inline-block;padding:7px 18px;border:1px solid rgba(214,178,101,0.4);border-radius:2px;color:#d9b465;font-size:12.5px;letter-spacing:2.5px;font-weight:600;margin-bottom:28px">HOLDING ENERGÉTICO INTERNACIONAL</div>
+    <h1 style="font-size:56px;line-height:1.12;color:#fff;font-weight:600;margin-bottom:24px;text-shadow:0 2px 24px rgba(0,0,0,0.35)">Energía, <em>Ingeniería</em> y Confiabilidad</h1>
+    <p style="font-size:17.5px;line-height:1.7;color:#aab4c4;margin-bottom:40px;max-width:620px;margin-left:auto;margin-right:auto">APC Petroleum CA es un ecosistema empresarial integrado por seis entidades especializadas que operan en sinergia en los sectores de petróleo, gas, ingeniería industrial e inspección técnica — con proyección hacia los mercados europeo y norteamericano.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:72px">
+      <a href="#empresas" style="padding:15px 32px;background:#b68a3d;border-radius:2px;font-size:14.5px;font-weight:600;color:#fff;letter-spacing:.3px" style-hover="background:#d9b465">Nuestras Empresas</a>
+      <a href="#contacto" style="padding:15px 32px;border:1.5px solid rgba(255,255,255,0.35);border-radius:2px;font-size:14.5px;font-weight:600;color:#fff;letter-spacing:.3px" style-hover="border-color:#fff">Iniciar Conversación</a>
+    </div>
+  </div>
+  <sc-if value="{{ showStats }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width:880px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;position:relative;z-index:2;border-top:1px solid rgba(255,255,255,0.18);padding-top:40px">
+    <sc-for list="{{ stats }}" as="stat" hint-placeholder-count="4">
+      <div style="text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:38px;color:#d9b465;font-weight:600;margin-bottom:6px">{{ stat.value }}</div>
+        <div style="font-size:13px;color:#8a94a6;letter-spacing:.3px">{{ stat.label }}</div>
+      </div>
+    </sc-for>
+  </div>
+  </sc-if>
+</section>
+
+<!-- IDENTIDAD -->
+
+
+<!-- MISION VISION VALORES -->
+<section id="quienes-somos" style="position: relative; padding: 104px 48px 88px; max-width: 1240px; margin: 0 auto; background-color: #EFECE5; width: 1341px; height: 552px">
+  <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:72px;align-items:center">
+    <div>
+      <div style="color:#b68a3d;font-size:12.5px;letter-spacing:2.5px;font-weight:600;margin-bottom:16px">NUESTRA IDENTIDAD</div>
+      <h2 style="font-size:38px;line-height:1.2;color:#0d1b30;font-weight:600;margin-bottom:24px">Un grupo <em>diferente</em> por diseño</h2>
+      <p style="font-size:16px;line-height:1.75;color:#4a5261;margin-bottom:18px">APC Petroleum CA no es una empresa con divisiones — es un ecosistema donde cada entidad tiene una identidad propia, un mercado objetivo definido y una especialidad irrepetible. Lejos de competir entre sí, cada empresa aporta una pieza esencial de la cadena de valor que ninguna podría ofrecer sola.</p>
+      <p style="font-size:16px;line-height:1.75;color:#4a5261;margin-bottom:32px">Este modelo, análogo a los grandes conglomerados internacionales de servicios industriales, permite ofrecer al cliente una propuesta integral que abarca desde la ingeniería de detalle hasta la certificación técnica, la medición fiscal y la gestión de activos con Industria 4.0.</p>
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <sc-for list="{{ identityPoints }}" as="pt" hint-placeholder-count="3">
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="width:7px;height:7px;background:#b68a3d;margin-top:9px;flex:none"></div>
+            <div style="font-size:15.5px;line-height:1.6;color:#232a35"><strong style="font-weight:700;color:#0d1b30">{{ pt.title }}</strong> {{ pt.desc }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="position:relative">
+      <div style="position:absolute;inset:-16px -16px auto auto;width:100%;height:100%;border:1px solid #d9b465;z-index:0"></div>
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="identity-photo" shape="rect" placeholder="Foto: instalaciones / equipo APC Petroleum" hint-size="100%,480px" style="position:relative;z-index:1;width:100%;aspect-ratio:4/5;display:block"></x-import>
+    </div>
+  </div>
+</section><section style="background:#0d1b30;padding:88px 48px">
+  <div style="max-width:1240px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:56px">
+      <div style="color:#d9b465;font-size:12.5px;letter-spacing:2.5px;font-weight:600;margin-bottom:16px">MISIÓN, VISIÓN Y VALORES</div>
+      <h2 style="font-size:34px;color:#fff;font-weight:600">Lo que nos <em>orienta</em></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px">
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-left:3px solid #b68a3d;padding:36px 32px;border-radius:2px;transition:transform .25s ease,box-shadow .25s ease,border-left-color .25s ease;cursor:default" style-hover="transform:translateY(-6px);box-shadow:0 16px 32px rgba(0,0,0,0.35);border-left-color:#d9b465">
+        <h3 style="font-size:21px;color:#d9b465;font-weight:600;margin-bottom:18px">Misión</h3>
+        <p style="font-size:14.5px;line-height:1.8;color:#c3cad6">Integrar y coordinar las capacidades de ingeniería, procura, construcción, inspección técnica, medición fiscal, confiabilidad industrial, comercialización y financiamiento internacional de las seis empresas del Grupo, ofreciendo una cadena de valor completa y verificable bajo un mismo holding, con estándares internacionales.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-left:3px solid #b68a3d;padding:36px 32px;border-radius:2px;transition:transform .25s ease,box-shadow .25s ease,border-left-color .25s ease;cursor:default" style-hover="transform:translateY(-6px);box-shadow:0 16px 32px rgba(0,0,0,0.35);border-left-color:#d9b465">
+        <h3 style="font-size:21px;color:#d9b465;font-weight:600;margin-bottom:18px">Visión</h3>
+        <p style="font-size:14.5px;line-height:1.8;color:#c3cad6">Consolidarnos como el ecosistema industrial energético integrado de referencia en la región, reconocidos por nuestra capacidad técnica combinada, nuestro acceso a financiamiento europeo y mercados norteamericanos, operando siempre bajo pleno cumplimiento normativo.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-left:3px solid #b68a3d;padding:36px 32px;border-radius:2px;transition:transform .25s ease,box-shadow .25s ease,border-left-color .25s ease;cursor:default" style-hover="transform:translateY(-6px);box-shadow:0 16px 32px rgba(0,0,0,0.35);border-left-color:#d9b465">
+        <h3 style="font-size:21px;color:#d9b465;font-weight:600;margin-bottom:18px">Valores</h3>
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <sc-for list="{{ values }}" as="val" hint-placeholder-count="5">
+            <div style="font-size:14px;line-height:1.6;color:#c3cad6;display:flex;gap:8px"><span style="color:#d9b465;flex:none">—</span><span>{{ val }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAFOLIO -->
+<section id="empresas" style="padding: 104px 48px; max-width: 1320px; margin: 0 auto; background-color: #EFECE5; width: 1358px; height: 1237px">
+  <div style="text-align:center;max-width:680px;margin:0 auto 64px">
+    <div style="color:#b68a3d;font-size:12.5px;letter-spacing:2.5px;font-weight:600;margin-bottom:16px">PORTAFOLIO CORPORATIVO</div>
+    <h2 style="font-size:38px;color:#0d1b30;font-weight:600;margin-bottom:18px">Seis empresas, <em>una visión</em></h2>
+    <p style="font-size:16px;line-height:1.7;color:#5b6472">Cada entidad domina un campo específico y mantiene un mercado objetivo propio, integradas en sinergia bajo un mismo holding.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+    <sc-for list="{{ companies }}" as="co" hint-placeholder-count="6">
+      <div style="background:#fff;border:1px solid #e6e2da;border-radius:2px;padding:32px;display:flex;flex-direction:column;gap:16px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;cursor:default" style-hover="transform:translateY(-6px);box-shadow:0 16px 32px rgba(13,27,48,0.14);border-color:#b68a3d">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <span style="font-size:12px;letter-spacing:.5px;color:#8a94a6;font-weight:600">{{ co.country }} · Fundada {{ co.year }}</span>
+        </div>
+        <div style="height:56px;display:flex;align-items:center"><img src="{{ co.logo }}" alt="{{ co.name }}" style="max-height:56px;max-width:170px;object-fit:contain"></div>
+        <div>
+          <h3 style="font-size:20px;color:#0d1b30;font-weight:700;margin-bottom:6px">{{ co.name }}</h3>
+          <div style="font-size:13.5px;color:#b68a3d;font-weight:600;margin-bottom:12px">{{ co.specialty }}</div>
+          <p style="font-size:14px;line-height:1.7;color:#5b6472;margin-bottom:16px">{{ co.desc }}</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px">
+          <sc-for list="{{ co.tags }}" as="tag" hint-placeholder-count="3">
+            <span style="font-size:11.5px;padding:5px 11px;background:#eef1f4;color:#3e5b68;border-radius:2px;font-weight:600;letter-spacing:.2px">{{ tag }}</span>
+          </sc-for>
+        </div>
+        <a href="{{ co.url }}" target="_blank" style="font-size:13.5px;font-weight:600;color:#0d1b30;border-top:1px solid #e6e2da;padding-top:16px;margin-top:auto" style-hover="color:#b68a3d">{{ co.urlLabel }} ↗</a>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" style="padding: 104px 48px; background-color: #0A1526">
+  <div style="max-width: 1320px; margin: 0 auto">
+    <div style="text-align:center;max-width:680px;margin:0 auto 64px">
+      <div style="color:#b68a3d;font-size:12.5px;letter-spacing:2.5px;font-weight:600;margin-bottom:16px">SERVICIOS INTEGRADOS</div>
+      <h2 style="font-size: 38px; color: #FFFFFF; font-weight: 600; margin-bottom: 18px">Diseñamos, <em>construimos,</em> certificamos y optimizamos</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: #DDE1E6">Nuestras seis empresas cubren la cadena completa de servicios industriales — desde la fase de ingeniería hasta la gestión digital de activos.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+      <sc-for list="{{ services }}" as="sv" hint-placeholder-count="8">
+        <div style="background:#fff;border:1px solid #e0dcd2;border-left:4px solid #d9b465;padding:30px 26px;border-radius:2px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;cursor:default" style-hover="transform:translateY(-6px);box-shadow:0 16px 32px rgba(13,27,48,0.14);border:2mm solid #b68a3d;border-left:4px solid #d9b465">
+          <div style="width:38px;height:38px;border:1.5px solid #b68a3d;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#b68a3d;font-family:'Playfair Display',serif;font-weight:600;font-size:15px;margin-bottom:20px">{{ sv.num }}</div>
+          <h3 style="font-size:16.5px;color:#0d1b30;font-weight:700;margin-bottom:10px;line-height:1.3">{{ sv.title }}</h3>
+          <p style="font-size:13.5px;line-height:1.65;color:#5b6472">{{ sv.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- PRESENCIA -->
+<section id="presencia" style="padding: 104px 48px; max-width: 1240px; margin: 0 auto; background-color: #EFECE5; width: 1272px; height: 628px">
+  <div style="text-align:center;max-width:680px;margin:0 auto 64px">
+    <div style="color:#b68a3d;font-size:12.5px;letter-spacing:2.5px;font-weight:600;margin-bottom:16px">PRESENCIA GLOBAL</div>
+    <h2 style="font-size:38px;color:#0d1b30;font-weight:600;margin-bottom:18px">Tres países, <em>una estrategia</em></h2>
+    <p style="font-size:16px;line-height:1.7;color:#5b6472">La arquitectura corporativa del grupo opera en múltiples jurisdicciones, separando los flujos operativos venezolanos de la infraestructura financiera internacional.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+    <sc-for list="{{ presence }}" as="pl" hint-placeholder-count="3">
+      <div style="background:#fff;border:1px solid #e6e2da;border-radius:2px;padding:36px 30px;display:flex;flex-direction:column;gap:14px;transition:transform .25s ease,box-shadow .25s ease;cursor:default" style-hover="transform:translateY(-6px);box-shadow:0 16px 32px rgba(13,27,48,0.14)">
+        <img src="{{ pl.flag }}" alt="{{ pl.country }}" style="width:44px;height:44px;border-radius:50%;object-fit:cover;margin-bottom:6px">
+        <div style="font-size:12px;letter-spacing:.5px;color:#b68a3d;font-weight:700">{{ pl.label }}</div>
+        <h3 style="font-size:22px;color:#0d1b30;font-weight:700">{{ pl.country }}</h3>
+        <p style="font-size:14px;line-height:1.7;color:#5b6472;margin-bottom:6px">{{ pl.desc }}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px">
+          <sc-for list="{{ pl.chips }}" as="chip" hint-placeholder-count="2">
+            <span style="font-size:11.5px;padding:5px 11px;background:#eef1f4;color:#3e5b68;border-radius:2px;font-weight:600">{{ chip }}</span>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" style="padding: 100px 48px 56px; background-color: #0A1526">
+  <div style="max-width:820px;margin:0 auto;text-align:center;margin-bottom:64px">
+    <div style="color:#d9b465;font-size:12.5px;letter-spacing:2.5px;font-weight:600;margin-bottom:16px">CONTACTO</div>
+    <h2 style="font-size:38px;color:#fff;font-weight:600;margin-bottom:20px">Hablemos de <em>su proyecto</em></h2>
+    <p style="font-size:16.5px;line-height:1.75;color:#aab4c4;margin-bottom:36px">Si busca un socio con capacidad integral en ingeniería, inspección, medición o financiamiento internacional para proyectos en el sector energético, el ecosistema APC Petroleum CA está listo para escucharle.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="mailto:{{ contactEmail }}" style="padding:15px 32px;background:#b68a3d;border-radius:2px;font-size:14.5px;font-weight:600;color:#fff;letter-spacing:.3px" style-hover="background:#d9b465">Enviar Consulta →</a>
+      <a href="{{ brochureHref }}" style="padding:15px 32px;border:1.5px solid rgba(255,255,255,0.35);border-radius:2px;font-size:14.5px;font-weight:600;color:#fff;letter-spacing:.3px" style-hover="border-color:#fff">Descargar Folleto Corporativo</a>
+    </div>
+  </div>
+
+  <div style="max-width:1120px;margin:0 auto 56px">
+    <div style="text-align:center;font-size:12.5px;letter-spacing:2px;color:#8a94a6;font-weight:600;margin-bottom:20px">PORTALES WEB DEL GRUPO</div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+      <sc-for list="{{ portals }}" as="pr" hint-placeholder-count="7">
+        <a href="{{ pr.url }}" target="_blank" style="padding:10px 20px;border:1px solid rgba(255,255,255,0.18);border-radius:2px;font-size:13.5px;color:#c3cad6;font-weight:500" style-hover="border-color:#d9b465;color:#d9b465">{{ pr.name }}</a>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="max-width:1120px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.12);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+    <img src="assets/apc-logo.png" alt="APC Petroleum CA" style="height: 50px; width: 95px; filter: brightness(0) invert(1); opacity: .85">
+    <div style="font-size:13px;color:#7c8698">© 2026 APC Petroleum CA</div>
+  </div>
+</section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;brochureHref&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contenido funcional&quot;},&quot;contactEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;info@apc.com.ve&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contenido funcional&quot;},&quot;showStats&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido funcional&quot;}}">
+class Component extends DCLogic {
+  state = { active: 'inicio' };
+
+  componentDidMount() {
+    const ids = ['inicio', 'quienes-somos', 'empresas', 'servicios', 'presencia'];
+    const els = ids.map(id => document.getElementById(id)).filter(Boolean);
+    this._observer = new IntersectionObserver((entries) => {
+      let best = null;
+      for (const e of entries) {
+        if (e.isIntersecting && (!best || e.intersectionRatio > best.intersectionRatio)) best = e;
+      }
+      if (best) this.setState({ active: best.target.id });
+    }, { root: null, threshold: [0.15, 0.3, 0.5], rootMargin: '-88px 0px -60% 0px' });
+    els.forEach(el => this._observer.observe(el));
+  }
+
+  componentWillUnmount() {
+    if (this._observer) this._observer.disconnect();
+  }
+
+  renderVals() {
+    const gold = '#b68a3d';
+    const ink = '#232a35';
+    const navColors = {
+      inicio: this.state.active === 'inicio' ? gold : ink,
+      quienesSomos: this.state.active === 'quienes-somos' ? gold : ink,
+      empresas: this.state.active === 'empresas' ? gold : ink,
+      servicios: this.state.active === 'servicios' ? gold : ink,
+      presencia: this.state.active === 'presencia' ? gold : ink
+    };
+    return {
+      navColors,
+      brochureHref: this.props.brochureHref ?? '#',
+      contactEmail: this.props.contactEmail ?? 'info@apc.com.ve',
+      showStats: this.props.showStats ?? true,
+      stats: [
+        { value: '6', label: 'Empresas Especializadas' },
+        { value: '3', label: 'Países de Operación' },
+        { value: '25+', label: 'Años de Trayectoria' },
+        { value: '50.000+', label: 'Horas de Ingeniería' }
+      ],
+      identityPoints: [
+        { title: 'Especialización sin solapamiento.', desc: 'Cada empresa opera dentro de sus límites definidos.' },
+        { title: 'Sinergia real.', desc: 'El activo de una es el respaldo de todas.' },
+        { title: 'Visión global, raíces venezolanas.', desc: 'Nacidos en Venezuela, estructurados para el mundo.' }
+      ],
+      values: [
+        'Sinergia sobre competencia interna: seis empresas coordinadas para sumar valor al cliente, no competir entre sí.',
+        'Especialización técnica: cada entidad domina un campo — IPC, inspección API, medición fiscal, confiabilidad 4.0, financiamiento UE, comercio internacional.',
+        'Cumplimiento normativo: operación bajo cumplimiento OFAC explícito en TESCO y normas API en SSAPI.',
+        'Excelencia operativa verificable: miles de horas de ingeniería ejecutadas y certificaciones API 510 y 653.',
+        'Innovación aplicada: Industria 4.0, IIoT e ISO 55000 como diferenciador tecnológico regional.'
+      ],
+      companies: [
+        { country: 'Venezuela', year: '2000', logo: 'assets/logo-paldaca.png', name: 'Consorcio Paldaca C.A.', specialty: 'Ingeniería · Procura · Construcción', desc: 'Empresa ancla del grupo. Ejecuta proyectos IPC integrales en los sectores petrolero, petroquímico, energético e industrial. Hub logístico con oficinas, taller, almacén y flota de equipos.', tags: ['IPC', 'Ingeniería de Detalle', 'Obras Civiles', 'Mantenimiento'], url: 'https://paldaca.com', urlLabel: 'paldaca.com' },
+        { country: 'Venezuela', year: '2023', logo: 'assets/logo-ssapi.png', name: 'Servicios y Soluciones API (SSAPI)', specialty: 'Inspección Técnica · API 510 / 570 / 653', desc: '50.000+ horas de ingeniería ejecutadas. Especializada en inspección bajo normas API internacionales, pruebas de pozos y análisis predictivo de equipos estáticos y rotativos.', tags: ['API 653', 'API 510', 'API 570', 'Pruebas de Pozos'], url: 'https://ssapico.com', urlLabel: 'ssapico.com' },
+        { country: 'Venezuela', year: '2018', logo: 'assets/logo-orinoco.jpg', name: 'Orinoco Energy C.A.', specialty: 'Medición Fiscal de Hidrocarburos', desc: 'Diseña y ejecuta sistemas de medición fiscal para hidrocarburos líquidos y gaseosos. Provee también personal técnico especializado como servicio outsourced.', tags: ['Medición Fiscal', 'SCADA', 'Instrumentación', 'Asistencia Técnica'], url: 'https://orinoconrg.com', urlLabel: 'orinoconrg.com' },
+        { country: 'Venezuela', year: '2026', logo: 'assets/logo-reliatech.png', name: 'Relia Tech Global', specialty: 'Confiabilidad Industrial · ISO 55000', desc: 'La empresa tecnológica del grupo. Implementa RCM, análisis FMEA, plataformas IIoT y software propietario para la gestión predictiva de activos industriales en tiempo real.', tags: ['RCM', 'ISO 55000', 'IIoT', 'CMMS/EAM'], url: 'https://reliatechglobal.com', urlLabel: 'reliatechglobal.com' },
+        { country: 'Portugal (UE)', year: '2022', logo: 'assets/logo-ksp.png', name: 'Kinetic Scale Projectos LDA (KSP)', specialty: 'Representación Europea · Financiamiento UE', desc: 'Entidad domiciliada en la Unión Europea (Mealhada, Portugal). Puerta de acceso al sistema financiero europeo. Canal de importación de tecnología y materiales de calidad europea.', tags: ['Financiamiento UE', 'Importación', 'Representación', 'No-OFAC'], url: 'https://ksprojectos.pt', urlLabel: 'ksprojectos.pt' },
+        { country: 'Estados Unidos', year: '2018', logo: 'assets/logo-tesco.jpg', name: 'Trade Energy & Services Co. (TESCO)', specialty: 'Procura Internacional · Comercio Energético', desc: 'Entidad con base legal en EE.UU. para importación, exportación y procura de productos industriales y energéticos en el mercado norteamericano. Opera bajo estricto cumplimiento OFAC.', tags: ['Procura USA', "Comercio Int'l", 'OFAC Compliance'], url: 'https://tesco.us.com', urlLabel: 'tesco.us.com' }
+      ],
+      services: [
+        { num: '01', title: 'Ingeniería de Detalle Multidisciplinaria', desc: 'Procesos, civil, tuberías, instrumentación y electricidad. Proyectos llave en mano en sectores petrolero, petroquímico y energético.' },
+        { num: '02', title: 'Inspección Técnica bajo Normas API', desc: 'Inspecciones certificadas de tanques (API 653), recipientes a presión (API 510) y tuberías en operación (API 570).' },
+        { num: '03', title: 'Medición Fiscal de Hidrocarburos', desc: 'Diseño, procura, instalación y mantenimiento de sistemas de medición fiscal para crudo, gas y derivados. Caudalímetros, SCADA y más.' },
+        { num: '04', title: 'Gestión de Activos con Industria 4.0', desc: 'RCM, ISO 55000, plataformas IIoT para monitoreo en tiempo real. Software propietario de confiabilidad industrial y taxonomía CMMS.' },
+        { num: '05', title: 'Pruebas de Pozos y Muestreo', desc: 'Toma de muestras de hidrocarburo líquido y gaseoso, pruebas de nivel de pozos petroleros y elaboración de informes técnicos normados.' },
+        { num: '06', title: 'Procura e Importación Internacional', desc: 'Acceso a proveedores europeos y norteamericanos de primer nivel. Importación de materiales y equipos especializados vía KSP y TESCO.' },
+        { num: '07', title: 'Asistencia Técnica Profesional', desc: 'Suministro de personal técnico especializado en instrumentación, medición y confiabilidad industrial para el sector energético.' },
+        { num: '08', title: 'Acceso a Financiamiento Europeo', desc: 'Estructuración de proyectos financiables con banca europea a través de Kinetic Scale (Portugal). Esquemas de internacionalización empresarial.' }
+      ],
+      presence: [
+        { flag: 'assets/flag-ve.png', label: 'CENTRO OPERATIVO', country: 'Venezuela', desc: 'Sede de cuatro empresas del grupo. Hub de operaciones industriales en el sector petrolero y energético. Paldaca C.A. actúa como ancla logística con infraestructura física propia.', chips: ['Paldaca', 'SSAPI', 'Orinoco Energy', 'Relia Tech'] },
+        { flag: 'assets/flag-pt.png', label: 'PUERTA DE ENTRADA EUROPEA', country: 'Portugal · Unión Europea', desc: 'Kinetic Scale Projectos LDA (Mealhada) es el vehículo de internacionalización del grupo ante la banca europea. No afectada por restricciones OFAC.', chips: ['Kinetic Scale (KSP)', 'Financiamiento UE'] },
+        { flag: 'assets/flag-us.png', label: 'PLATAFORMA DE COMERCIO INTERNACIONAL', country: 'Estados Unidos', desc: 'Trade Energy & Services Co. (TESCO) es la entidad norteamericana del grupo, plataforma de procura y comercio. Opera bajo estricto cumplimiento OFAC en todo momento.', chips: ['TESCO', 'Procura USA', 'OFAC Compliance'] }
+      ],
+      portals: [
+        { name: 'APC Petroleum CA · apc.com.ve', url: 'https://apc.com.ve' },
+        { name: 'Paldaca C.A. · paldaca.com', url: 'https://paldaca.com' },
+        { name: 'SSAPI · ssapico.com', url: 'https://ssapico.com' },
+        { name: 'Orinoco Energy · orinoconrg.com', url: 'https://orinoconrg.com' },
+        { name: 'Relia Tech Global · reliatechglobal.com', url: 'https://reliatechglobal.com' },
+        { name: 'Kinetic Scale (KSP) · ksprojectos.pt', url: 'https://ksprojectos.pt' },
+        { name: 'TESCO · tesco.us.com', url: 'https://tesco.us.com' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
