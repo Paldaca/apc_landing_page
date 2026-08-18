@@ -37,7 +37,7 @@
     { "@type": "Organization", "name": "Consorcio Paldaca C.A.", "url": "https://paldaca.com" },
     { "@type": "Organization", "name": "Servicios y Soluciones API (SSAPI)", "url": "https://ssapico.com" },
     { "@type": "Organization", "name": "Orinoco Energy C.A.", "url": "https://orinoconrg.com" },
-    { "@type": "Organization", "name": "Relia Tech Global", "url": "https://reliatechglobal.com" },
+    { "@type": "Organization", "name": "ReliaTech Global", "url": "https://reliatechglobal.com" },
     { "@type": "Organization", "name": "Kinetic Scale Projectos LDA (KSP)", "url": "https://ksprojectos.pt" },
     { "@type": "Organization", "name": "Trade Energy & Services Co. (TESCO)", "url": "https://tesco.us.com" }
   ]
@@ -140,7 +140,7 @@
         <button onclick="{{ setLangEn }}" style="padding:9px 14px;background:{{ langBg.en }};color:{{ langColor.en }};border:none;font-size:13px;font-weight:700;cursor:pointer;letter-spacing:.3px">EN</button>
       </div>
       <a href="#contacto" style="padding:11px 22px;border:1.5px solid #0d1b30;border-radius:2px;font-size:13.5px;font-weight:600;color:#0d1b30;letter-spacing:.3px" style-hover="background:#0d1b30;color:#fff">{{ t.navContacto }}</a>
-      <a href="assets/APC Petroleum - Brochure.pdf" download="APC Petroleum - Brochure.pdf" style="padding:11px 22px;background:#b68a3d;border-radius:2px;font-size:13.5px;font-weight:600;color:#fff;letter-spacing:.3px;white-space:nowrap" style-hover="background:#8f6c2c">{{ t.navBrochure }}</a>
+      <a href="assets/{{ brochureFile }}" download="{{ brochureFile }}" style="padding:11px 22px;background:#b68a3d;border-radius:2px;font-size:13.5px;font-weight:600;color:#fff;letter-spacing:.3px;white-space:nowrap" style-hover="background:#8f6c2c">{{ t.navBrochure }}</a>
     </div>
   </div>
   <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu"><span></span><span></span><span></span></label>
@@ -307,7 +307,11 @@
     <p style="font-size:16.5px;line-height:1.75;color:#aab4c4;margin-bottom:36px">{{ t.contactBody }}</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
       <a href="mailto:{{ contactEmail }}" style="padding:15px 32px;background:#b68a3d;border-radius:2px;font-size:14.5px;font-weight:600;color:#fff;letter-spacing:.3px" style-hover="background:#d9b465">{{ t.contactCta1 }}</a>
-      <a href="assets/APC Petroleum - Brochure.pdf"  download="APC Petroleum - Brochure.pdf" style="padding:15px 32px;border:1.5px solid rgba(255,255,255,0.35);border-radius:2px;font-size:14.5px;font-weight:600;color:#fff;letter-spacing:.3px" style-hover="border-color:#fff">{{ t.navBrochure }}</a>
+      <a href="assets/{{ brochureFile }}" download="{{ brochureFile }}" style="padding:15px 32px;border:1.5px solid rgba(255,255,255,0.35);border-radius:2px;font-size:14.5px;font-weight:600;color:#fff;letter-spacing:.3px" style-hover="border-color:#fff">{{ t.navBrochure }}</a>
+    </div>
+    <div style="display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:32px">
+      <a href="mailto:{{ contactEmail }}" style="color:#c3cad6;font-size:14.5px;font-weight:500;text-decoration:none" style-hover="color:#d9b465">{{ contactEmail }}</a>
+      <a href="tel:{{ contactPhoneHref }}" style="color:#c3cad6;font-size:14.5px;font-weight:500;text-decoration:none" style-hover="color:#d9b465">{{ contactPhone }}</a>
     </div>
   </div>
 
@@ -329,7 +333,7 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;brochureHref&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contenido funcional&quot;},&quot;contactEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;info@apc.com.ve&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contenido funcional&quot;},&quot;showStats&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido funcional&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;brochureHref&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contenido funcional&quot;},&quot;contactEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;info@apc.com.ve&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contenido funcional&quot;},&quot;contactPhone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;+58 424 2247245&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contenido funcional&quot;},&quot;showStats&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido funcional&quot;}}">
 const TRANSLATIONS = {
   es: {
     navInicio: 'Inicio', navQuienes: 'Quiénes Somos', navEmpresas: 'Empresas', navServicios: 'Servicios', navPresencia: 'Presencia',
@@ -340,7 +344,7 @@ const TRANSLATIONS = {
     heroCta1: 'Nuestras Empresas', heroCta2: 'Iniciar Conversación',
     identityEyebrow: 'NUESTRA IDENTIDAD',
     identityTitlePre: 'Un grupo', identityTitleEm: 'diferente', identityTitlePost: 'por diseño',
-    identityBody1: 'APC Petroleum CA no es una empresa con divisiones — es un ecosistema donde cada entidad tiene una identidad propia, un mercado objetivo definido y una especialidad irrepetible. Lejos de competir entre sí, cada empresa aporta una pieza esencial de la cadena de valor que ninguna podría ofrecer sola.',
+    identityBody1: 'APC Petroleum CA es un ecosistema donde cada entidad tiene una identidad propia, un mercado objetivo definido y una especialidad irrepetible. Lejos de competir entre sí, cada empresa aporta una pieza esencial de la cadena de valor que ninguna podría ofrecer sola.',
     identityBody2: 'Este modelo, análogo a los grandes conglomerados internacionales de servicios industriales, permite ofrecer al cliente una propuesta integral que abarca desde la ingeniería de detalle hasta la certificación técnica, la medición fiscal y la gestión de activos con Industria 4.0.',
     mvvEyebrow: 'MISIÓN, VISIÓN Y VALORES', mvvTitlePre: 'Lo que nos', mvvTitleEm: 'orienta',
     missionTitle: 'Misión', missionBody: 'Integrar y coordinar las capacidades de ingeniería, procura, construcción, inspección técnica, medición fiscal, confiabilidad industrial, comercialización y financiamiento internacional de las seis empresas del Grupo, ofreciendo una cadena de valor completa y verificable bajo un mismo holding, con estándares internacionales.',
@@ -368,7 +372,7 @@ const TRANSLATIONS = {
     heroCta1: 'Our Companies', heroCta2: 'Start a Conversation',
     identityEyebrow: 'OUR IDENTITY',
     identityTitlePre: 'A group', identityTitleEm: 'different', identityTitlePost: 'by design',
-    identityBody1: 'APC Petroleum CA is not a company with divisions — it is an ecosystem where each entity has its own identity, a defined target market, and a specialty no other can replicate. Far from competing with each other, each company contributes an essential piece of the value chain that none could offer alone.',
+    identityBody1: 'APC Petroleum CA it is an ecosystem where each entity has its own identity, a defined target market, and a specialty no other can replicate. Far from competing with each other, each company contributes an essential piece of the value chain that none could offer alone.',
     identityBody2: 'This model, similar to major international industrial services conglomerates, lets us offer clients a comprehensive proposal spanning detailed engineering, technical certification, fiscal measurement, and Industry 4.0 asset management.',
     mvvEyebrow: 'MISSION, VISION AND VALUES', mvvTitlePre: 'What guides', mvvTitleEm: 'us',
     missionTitle: 'Mission', missionBody: "Integrate and coordinate the engineering, procurement, construction, technical inspection, fiscal measurement, industrial reliability, commercialization, and international financing capabilities of the Group's six companies, offering a complete, verifiable value chain under one holding, to international standards.",
@@ -413,7 +417,7 @@ const DATA = {
       { country: 'Venezuela', year: '2000', logo: 'assets/logo-paldaca.png', name: 'Consorcio Paldaca C.A.', specialty: 'Ingeniería · Procura · Construcción', desc: 'Empresa ancla del grupo. Ejecuta proyectos IPC integrales en los sectores petrolero, petroquímico, energético e industrial. Hub logístico con oficinas, taller, almacén y flota de equipos.', tags: ['IPC', 'Ingeniería de Detalle', 'Obras Civiles', 'Mantenimiento'], url: 'https://paldaca.com', urlLabel: 'paldaca.com' },
       { country: 'Venezuela', year: '2023', logo: 'assets/logo-ssapi.png', name: 'Servicios y Soluciones API (SSAPI)', specialty: 'Inspección Técnica · API 510 / 570 / 653', desc: '50.000+ horas de ingeniería ejecutadas. Especializada en inspección bajo normas API internacionales, pruebas de pozos y análisis predictivo de equipos estáticos y rotativos.', tags: ['API 653', 'API 510', 'API 570', 'Pruebas de Pozos'], url: 'https://ssapico.com', urlLabel: 'ssapico.com' },
       { country: 'Venezuela', year: '2018', logo: 'assets/logo-orinoco.png', name: 'Orinoco Energy C.A.', specialty: 'Medición Fiscal de Hidrocarburos', desc: 'Diseña y ejecuta sistemas de medición fiscal para hidrocarburos líquidos y gaseosos. Provee también personal técnico especializado como servicio outsourced.', tags: ['Medición Fiscal', 'SCADA', 'Instrumentación', 'Asistencia Técnica'], url: 'https://orinoconrg.com', urlLabel: 'orinoconrg.com' },
-      { country: 'Venezuela', year: '2026', logo: 'assets/logo-reliatech.png', name: 'Relia Tech Global', specialty: 'Confiabilidad Industrial · ISO 55000', desc: 'La empresa tecnológica del grupo. Implementa RCM, análisis FMEA, plataformas IIoT y software propietario para la gestión predictiva de activos industriales en tiempo real.', tags: ['RCM', 'ISO 55000', 'IIoT', 'CMMS/EAM'], url: 'https://reliatechglobal.com', urlLabel: 'reliatechglobal.com' },
+      { country: 'Venezuela', year: '2026', logo: 'assets/logo-reliatech.png', name: 'ReliaTech Global', specialty: 'Confiabilidad Industrial · ISO 55000', desc: 'La empresa tecnológica del grupo. Implementa RCM, análisis FMEA, plataformas IIoT y software propietario para la gestión predictiva de activos industriales en tiempo real.', tags: ['RCM', 'ISO 55000', 'IIoT', 'CMMS/EAM'], url: 'https://reliatechglobal.com', urlLabel: 'reliatechglobal.com' },
       { country: 'Portugal (UE)', year: '2022', logo: 'assets/logo-ksp.png', name: 'Kinetic Scale Projectos LDA (KSP)', specialty: 'Representación Europea · Financiamiento UE', desc: 'Entidad domiciliada en la Unión Europea (Mealhada, Portugal). Puerta de acceso al sistema financiero europeo. Canal de importación de tecnología y materiales de calidad europea.', tags: ['Financiamiento UE', 'Importación', 'Representación', 'No-OFAC'], url: 'https://ksprojectos.pt', urlLabel: 'ksprojectos.pt' },
       { country: 'Estados Unidos', year: '2018', logo: 'assets/logo-tesco.jpg', name: 'Trade Energy & Services Co. (TESCO)', specialty: 'Procura Internacional · Comercio Energético', desc: 'Entidad con base legal en EE.UU. para importación, exportación y procura de productos industriales y energéticos en el mercado norteamericano. Opera bajo estricto cumplimiento OFAC.', tags: ['Procura USA', "Comercio Int'l", 'OFAC Compliance'], url: 'https://tesco.us.com', urlLabel: 'tesco.us.com' }
     ],
@@ -456,7 +460,7 @@ const DATA = {
       { country: 'Venezuela', year: '2000', logo: 'assets/logo-paldaca.png', name: 'Consorcio Paldaca C.A.', specialty: 'Engineering · Procurement · Construction', desc: 'The group\'s anchor company. Executes full EPC projects in the oil, petrochemical, energy, and industrial sectors. Logistics hub with offices, workshop, warehouse, and equipment fleet.', tags: ['EPC', 'Detail Engineering', 'Civil Works', 'Maintenance'], url: 'https://paldaca.com', urlLabel: 'paldaca.com' },
       { country: 'Venezuela', year: '2023', logo: 'assets/logo-ssapi.png', name: 'Servicios y Soluciones API (SSAPI)', specialty: 'Technical Inspection · API 510 / 570 / 653', desc: '50,000+ engineering hours executed. Specialized in inspection under international API standards, well testing, and predictive analysis of static and rotating equipment.', tags: ['API 653', 'API 510', 'API 570', 'Well Testing'], url: 'https://ssapico.com', urlLabel: 'ssapico.com' },
       { country: 'Venezuela', year: '2018', logo: 'assets/logo-orinoco.png', name: 'Orinoco Energy C.A.', specialty: 'Hydrocarbon Fiscal Measurement', desc: 'Designs and executes fiscal measurement systems for liquid and gaseous hydrocarbons. Also provides specialized technical staff as an outsourced service.', tags: ['Fiscal Measurement', 'SCADA', 'Instrumentation', 'Technical Support'], url: 'https://orinoconrg.com', urlLabel: 'orinoconrg.com' },
-      { country: 'Venezuela', year: '2026', logo: 'assets/logo-reliatech.png', name: 'Relia Tech Global', specialty: 'Industrial Reliability · ISO 55000', desc: "The group's technology company. Implements RCM, FMEA analysis, IIoT platforms and proprietary software for real-time predictive management of industrial assets.", tags: ['RCM', 'ISO 55000', 'IIoT', 'CMMS/EAM'], url: 'https://reliatechglobal.com', urlLabel: 'reliatechglobal.com' },
+      { country: 'Venezuela', year: '2026', logo: 'assets/logo-reliatech.png', name: 'ReliaTech Global', specialty: 'Industrial Reliability · ISO 55000', desc: "The group's technology company. Implements RCM, FMEA analysis, IIoT platforms and proprietary software for real-time predictive management of industrial assets.", tags: ['RCM', 'ISO 55000', 'IIoT', 'CMMS/EAM'], url: 'https://reliatechglobal.com', urlLabel: 'reliatechglobal.com' },
       { country: 'Portugal (EU)', year: '2022', logo: 'assets/logo-ksp.png', name: 'Kinetic Scale Projectos LDA (KSP)', specialty: 'European Representation · EU Financing', desc: 'Entity domiciled in the European Union (Mealhada, Portugal). Gateway to the European financial system. Import channel for European-quality technology and materials.', tags: ['EU Financing', 'Import', 'Representation', 'Non-OFAC'], url: 'https://ksprojectos.pt', urlLabel: 'ksprojectos.pt' },
       { country: 'United States', year: '2018', logo: 'assets/logo-tesco.jpg', name: 'Trade Energy & Services Co. (TESCO)', specialty: 'International Procurement · Energy Trade', desc: 'Entity legally based in the U.S. for import, export, and procurement of industrial and energy products in the North American market. Operates under strict OFAC compliance.', tags: ['USA Procurement', "Int'l Trade", 'OFAC Compliance'], url: 'https://tesco.us.com', urlLabel: 'tesco.us.com' }
     ],
@@ -519,7 +523,10 @@ class Component extends DCLogic {
       setLangEs: () => this.setState({ lang: 'es' }),
       setLangEn: () => this.setState({ lang: 'en' }),
       brochureHref: this.props.brochureHref ?? 'assets/APC%20Petroleum%20-%20Brochure.pdf',
+      brochureFile: lang === 'en' ? 'APC Petroleum - Brochure (EN).pdf' : 'APC Petroleum - Brochure (ES).pdf',
       contactEmail: this.props.contactEmail ?? 'info@apc.com.ve',
+      contactPhone: this.props.contactPhone ?? '+58 424 2247245',
+      contactPhoneHref: (this.props.contactPhone ?? '+58 424 2247245').replace(/[^+\d]/g, ''),
       showStats: this.props.showStats ?? true,
       stats: d.stats,
       identityPoints: d.identityPoints,
@@ -532,7 +539,7 @@ class Component extends DCLogic {
         { name: 'Paldaca C.A. · paldaca.com', url: 'https://paldaca.com' },
         { name: 'SSAPI · ssapico.com', url: 'https://ssapico.com' },
         { name: 'Orinoco Energy · orinoconrg.com', url: 'https://orinoconrg.com' },
-        { name: 'Relia Tech Global · reliatechglobal.com', url: 'https://reliatechglobal.com' },
+        { name: 'ReliaTech Global · reliatechglobal.com', url: 'https://reliatechglobal.com' },
         { name: 'Kinetic Scale (KSP) · ksprojectos.pt', url: 'https://ksprojectos.pt' },
         { name: 'TESCO · tesco.us.com', url: 'https://tesco.us.com' }
       ]
