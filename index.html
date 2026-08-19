@@ -128,11 +128,11 @@
   <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
   <div class="site-nav-wrap">
     <nav class="site-nav" style="display:flex;align-items:center;gap:36px">
-      <a href="#inicio" style="color:{{ navColors.inicio }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">{{ t.navInicio }}</a>
-      <a href="#quienes-somos" style="color:{{ navColors.quienesSomos }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">{{ t.navQuienes }}</a>
-      <a href="#empresas" style="color:{{ navColors.empresas }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">{{ t.navEmpresas }}</a>
-      <a href="#servicios" style="color:{{ navColors.servicios }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">{{ t.navServicios }}</a>
-      <a href="#presencia" style="color:{{ navColors.presencia }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">{{ t.navPresencia }}</a>
+      <a href="#inicio" onclick="{{ setActiveInicio }}" style="color:{{ navColors.inicio }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">{{ t.navInicio }}</a>
+      <a href="#quienes-somos" onclick="{{ setActiveQuienes }}" style="color:{{ navColors.quienesSomos }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">{{ t.navQuienes }}</a>
+      <a href="#empresas" onclick="{{ setActiveEmpresas }}" style="color:{{ navColors.empresas }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">{{ t.navEmpresas }}</a>
+      <a href="#servicios" onclick="{{ setActiveServicios }}" style="color:{{ navColors.servicios }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">{{ t.navServicios }}</a>
+      <a href="#presencia" onclick="{{ setActivePresencia }}" style="color:{{ navColors.presencia }};font-size:14.5px;font-weight:600;letter-spacing:.2px;transition:color .2s ease" style-hover="color:#b68a3d">{{ t.navPresencia }}</a>
     </nav>
     <div class="header-actions" style="display:flex;align-items:center;gap:12px">
       <div style="display:flex;align-items:center;border:1.5px solid #d8d2c4;border-radius:2px;overflow:hidden">
@@ -505,6 +505,7 @@ class Component extends DCLogic {
   renderVals() {
     const gold = '#b68a3d';
     const ink = '#232a35';
+    console.log('Rendering with active section:', this.state.active);
     const navColors = {
       inicio: this.state.active === 'inicio' ? gold : ink,
       quienesSomos: this.state.active === 'quienes-somos' ? gold : ink,
@@ -522,6 +523,11 @@ class Component extends DCLogic {
       langColor: { es: lang === 'es' ? '#fff' : '#0d1b30', en: lang === 'en' ? '#fff' : '#0d1b30' },
       setLangEs: () => this.setState({ lang: 'es' }),
       setLangEn: () => this.setState({ lang: 'en' }),
+      setActiveInicio: () => this.setState({ active: 'inicio' }),
+      setActiveQuienes: () => this.setState({ active: 'quienes-somos' }),
+      setActiveEmpresas: () => this.setState({ active: 'empresas' }),
+      setActiveServicios: () => this.setState({ active: 'servicios' }),
+      setActivePresencia: () => this.setState({ active: 'presencia' }),
       brochureHref: this.props.brochureHref ?? 'assets/APC%20Petroleum%20-%20Brochure.pdf',
       brochureFile: lang === 'en' ? 'APC Petroleum - Brochure (EN).pdf' : 'APC Petroleum - Brochure (ES).pdf',
       contactEmail: this.props.contactEmail ?? 'info@apc.com.ve',
